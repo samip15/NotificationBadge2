@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:appNs="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+   <ImageView
+       android:layout_width="48dp"
+       android:layout_height="48dp"
+       android:id="@+id/icon"
+       android:src="@drawable/message"
+       android:layout_marginTop="8dp"
+       android:layout_centerHorizontal="true"/>
+    
+    <com.nex3z.notificationbadge.NotificationBadge
+        android:layout_width="28dp"
+        android:layout_height="28dp"
+        android:id="@+id/badge"
+        android:layout_toRightOf="@+id/icon"
+        android:layout_alignTop="@+id/icon"
+        appNs:badgeBackground="@drawable/badge_bg_with_shadow"
+        appNs:maxTextLength="2"
+        android:layout_marginTop="8dp"/>
+
+    <Button
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/btn_increase"
+        android:text="Increase"
+        android:layout_below="@+id/icon"/>
+
+    <Button
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/btn_many"
+        android:text="Many"
+        android:layout_below="@+id/btn_increase"/>
+
+    <Button
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/btn_clear"
+        android:text="Clear"
+        android:layout_below="@+id/btn_many"/>
+
+</RelativeLayout>
